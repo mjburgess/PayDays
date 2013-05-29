@@ -1,0 +1,8 @@
+1. generate 12 pay days (models [M1, M2, ... M12])
+2. apply DefaultTransform [(M1 -> M1'), ...] which sets the model's state
+3. apply weekday transform (M1' -> M'') which applies the weekday rule:
+    Rule tests to see if the bonus/pay day is Saturday or Sunday (WeekdayCondition)
+    if it is modify the date  (WeekdayDateTransform Next Wednesday / WeekdayTransform Prev Friday)
+4. format set [M1'', M2'', ... M12''] to [['y, m, payday, bonusday'], [...], ...]
+5. join and save to csv
+
