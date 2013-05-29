@@ -5,3 +5,7 @@ php:
   
 before_script:
   - composer install
+
+script:
+  - phpunit
+  - php bin/coverage.php coverage.xml 95
