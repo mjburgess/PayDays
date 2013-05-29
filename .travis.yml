@@ -6,6 +6,6 @@ php:
 before_script:
   - composer install
 
-script:
+after_script:
   - ls
-  - php /home/travis/build/mjburgess/PayDays/bin/coverage.php coverage.xml 95
+  - php bin/coverage.php coverage.xml 95
