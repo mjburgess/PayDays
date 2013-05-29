@@ -7,5 +7,5 @@ before_script:
   - composer install
 
 script:
-  - phpunit
-  - php bin/coverage.php coverage.xml 95
+  - ls
+  - php /home/travis/build/mjburgess/PayDays/bin/coverage.php coverage.xml 95
