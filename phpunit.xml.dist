@@ -6,7 +6,7 @@
     </testsuites>
 	<filter>
 	<whitelist addUncoveredFilesFromWhitelist="true">
-		<directory suffix=".php">./lib</directory>
+		<directory suffix=".php">./lib/mjburgess</directory>
 	</whitelist>
 	</filter>
 	<logging>
