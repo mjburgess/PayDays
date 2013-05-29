@@ -32,8 +32,8 @@ foreach($files as $file) {
 $coverage = ($checkedElements / $totalElements) * 100;
  
 if ($coverage < $percentage) {
-    echo 'Code coverage is ' . $coverage . '%, which is below the accepted ' . $percentage . '%' . PHP_EOL;
+    printf('Code coverage is %.1f %%, which is below the accepted ' . $percentage . '%%' . PHP_EOL, $coverage);
     exit(1);
 }
  
-echo 'Code coverage is ' . $coverage . '% - OK!' . PHP_EOL;
+printf('Code coverage is %.1f %%- OK!' . PHP_EOL, $coverage);
