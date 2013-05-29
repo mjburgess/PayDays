@@ -1,15 +1,15 @@
 <phpunit bootstrap="lib/vendor/autoload.php">
     <testsuites>
-        <filter>
-            <whitelist addUncoveredFilesFromWhitelist="true">
-                <directory suffix=".php">./lib</directory>
-            </whitelist>
-        </filter>
-        <logging>
-            <log type="coverage-clover" target="./coverage.xml"/>
-        </logging>
         <testsuite name="PayDates Test Suite">
             <directory>test</directory>
         </testsuite>
     </testsuites>
+	<filter>
+	<whitelist addUncoveredFilesFromWhitelist="true">
+		<directory suffix=".php">./lib</directory>
+	</whitelist>
+	</filter>
+	<logging>
+	<log type="coverage-clover" target="./coverage.xml"/>
+	</logging>
 </phpunit>
