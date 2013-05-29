@@ -1,5 +1,5 @@
 {
-    "name": "mjburgess/paydates",
+    "name": "mjburgess/paydays",
     "type": "library",
     "description": "Calculate pay dates with abitary rules.",
     "keywords": ["pay day"],
@@ -16,7 +16,10 @@
     },
     "autoload": {
         "psr-0" : {
-            "mjburgess\\paydates" : "lib/"
+            "mjburgess\\paydays" : "lib"
         }
-    }
+    },
+	"config": {
+		"vendor-dir": "lib/vendor"
+	}
 }
