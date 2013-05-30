@@ -14,20 +14,15 @@ class DefaultsTransformTest extends \PHPUnit_Framework_TestCase
     protected $object;
 
     /**
-     * Sets up the fixture, for example, opens a network connection.
-     * This method is called before a test is executed.
-     */
-    protected function setUp()
-    {
-        $this->object = new DefaultsTransform(10, 20);
-    }
-
-    /**
      * @covers mjburgess\paydays\transform\DefaultsTransform::getBonusDate
      */
     public function testGetBonusDate()
     {
+        $this->object = new DefaultsTransform(10, 20);
         $this->assertEquals(mktime(0,0,0,1,10,2013), $this->object->getBonusDate(mktime(0,0,0,1,2,2013)));
+
+        $this->object = new DefaultsTransform(DefaultsTransform::LAST_DAY, DefaultsTransform::LAST_DAY);
+        $this->assertEquals(date('t'), date('t', $this->object->getBonusDate(time())));
     }
 
     /**
@@ -35,7 +30,11 @@ class DefaultsTransformTest extends \PHPUnit_Framework_TestCase
      */
     public function testGetPayDate()
     {
+        $this->object = new DefaultsTransform(10, 20);
         $this->assertEquals(mktime(0,0,0,1,20,2013), $this->object->getPayDate(mktime(0,0,0,1,2,2013)));
+
+        $this->object = new DefaultsTransform(DefaultsTransform::LAST_DAY, DefaultsTransform::LAST_DAY);
+        $this->assertEquals(date('t'), date('d', $this->object->getPayDate(time())));
     }
 
     /**

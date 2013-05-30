@@ -9,7 +9,7 @@ use mjburgess\paydays\PayDates;
 class WeekdayTransformTest extends \PHPUnit_Framework_TestCase
 {
     /**
-     * @var WeekdayTransform
+     * @var CoTransform
      */
     protected $object;
 
@@ -19,7 +19,7 @@ class WeekdayTransformTest extends \PHPUnit_Framework_TestCase
      */
     protected function setUp()
     {
-        $this->object = new WeekdayTransform(new PassDateTransform(), new PassDateTransform());
+        $this->object = new CoTransform(new PassDateTransform(), new PassDateTransform());
     }
 
     /**

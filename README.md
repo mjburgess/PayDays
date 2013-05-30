@@ -16,4 +16,4 @@ php bin/paydays.php [$FILE = 'results.csv']
        PassDateTransform.php:  0 /  1  ,  0 /  2
                     Rule.php:  1 /  2  ,  2 /  6
     WeekdayDateTransform.php:  1 /  2  ,  2 /  6
-        WeekdayTransform.php:  2 /  4  ,  6 / 12
+        CoTransform  2 /  4  ,  6 / 12
