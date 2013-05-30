@@ -42,6 +42,8 @@ class DefaultsTransformTest extends \PHPUnit_Framework_TestCase
      */
     public function test__invoke()
     {
+        $this->object = new DefaultsTransform(10, 20);
+
         $pd = new PayDates(5, 2013);
         $pd->setPayDate(15);
         $pd->setBonusDate(25);
